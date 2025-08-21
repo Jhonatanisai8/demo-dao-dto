@@ -2,6 +2,7 @@ package com.isai.demo_dao_dto.controller;
 
 import java.util.List;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,26 +14,36 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.isai.demo_dao_dto.dto.UserDto;
+import com.isai.demo_dao_dto.service.interfaces.IUserService;
+
+import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequestMapping("/users")
+@RequiredArgsConstructor
 public class UserController {
 
+    private final IUserService userService;
+
     // listamos los usuarios
+    @GetMapping
     public ResponseEntity<List<UserDto>> listUsers() {
-        return null;
+        return new ResponseEntity<>(userService.listUsers(),
+                HttpStatus.OK);
     }
 
     // obtenemos un usuario
     @GetMapping("/{id}")
     public ResponseEntity<UserDto> getUserById(@PathVariable Long id) {
-        return null;
+        return new ResponseEntity<>(userService.getUserById(id),
+                HttpStatus.OK);
     }
 
     // creamos un usuario
     @PostMapping("/create")
     public ResponseEntity<UserDto> createUser(@RequestBody UserDto userDto) {
-        return null;
+        return new ResponseEntity<>(userService.createUser(userDto),
+                HttpStatus.CREATED);
     }
 
     // actualizamos un usuario
@@ -40,12 +51,15 @@ public class UserController {
     public ResponseEntity<UserDto> updateUser(
             @PathVariable Long id,
             @RequestBody UserDto userDto) {
-        return null;
+        return new ResponseEntity<>(userService.updateUser(id, userDto),
+                HttpStatus.CREATED);
     }
 
     // eliminamos un usuario
     @DeleteMapping("/{id}")
-    public ResponseEntity<UserDto> deleteUser(@PathVariable Long id) {
-        return null;
+    public ResponseEntity<String> deleteUser(@PathVariable Long id) {
+        userService.deleteUser(id);
+        return new ResponseEntity<>("User deleted successfully",
+                HttpStatus.NO_CONTENT);
     }
 }
