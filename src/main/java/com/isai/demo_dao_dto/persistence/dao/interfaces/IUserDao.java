@@ -11,9 +11,9 @@ public interface IUserDao {
 
     Optional<UserEntity> getUserById(Long id);
 
-    UserEntity createUser(UserEntity userEntity);
+    void createUser(UserEntity userEntity);
 
-    UserEntity updateUser(UserEntity userEntity);
+    void updateUser(UserEntity userEntity);
 
-    UserEntity deleteUser(UserEntity userEntity);
+    void deleteUser(UserEntity userEntity);
 }
