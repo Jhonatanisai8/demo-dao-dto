@@ -1,8 +1,9 @@
 package com.isai.demo_dao_dto.service.interfaces;
 
+import com.isai.demo_dao_dto.presentacion.dto.UserDto;
+
 import java.util.List;
 
-import com.isai.demo_dao_dto.dto.UserDto;
 
 public interface IUserService {
 

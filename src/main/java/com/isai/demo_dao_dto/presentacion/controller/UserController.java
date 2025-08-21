@@ -1,7 +1,8 @@
-package com.isai.demo_dao_dto.controller;
+package com.isai.demo_dao_dto.presentacion.controller;
 
 import java.util.List;
 
+import com.isai.demo_dao_dto.presentacion.dto.UserDto;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -13,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.isai.demo_dao_dto.dto.UserDto;
 import com.isai.demo_dao_dto.service.interfaces.IUserService;
 
 import lombok.RequiredArgsConstructor;

@@ -1,4 +1,4 @@
-package com.isai.demo_dao_dto.dto;
+package com.isai.demo_dao_dto.presentacion.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
