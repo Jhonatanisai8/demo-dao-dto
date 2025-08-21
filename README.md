@@ -73,5 +73,4 @@ La aplicación estará disponible en: `http://localhost:8080`
 - **Spring Data JPA** - Para el acceso a datos
 - **ModelMapper** - Para el mapeo entre entidades y DTOs
 - **Lombok** - Para reducir el código boilerplate
-- **Springdoc OpenAPI** - Documentación de la API
 
