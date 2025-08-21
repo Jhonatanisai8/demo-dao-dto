@@ -35,7 +35,6 @@ src/
 │   │       └── impl/                     # Implementaciones de servicios
 │   └── resources/
 │       └── application.properties        # Configuración de la aplicación
-└── test/                                 # Pruebas unitarias y de integración
 ```
 
 ## 🚀 Instalación
@@ -67,14 +66,6 @@ La aplicación estará disponible en: `http://localhost:8080`
 - `POST /api/users` - Crear un nuevo usuario
 - `PUT /api/users/{id}` - Actualizar un usuario existente
 - `DELETE /api/users/{id}` - Eliminar un usuario
-
-## 🧪 Pruebas
-
-Para ejecutar las pruebas unitarias:
-
-```bash
-mvn test
-```
 
 ## 🛠️ Tecnologías Utilizadas
 
