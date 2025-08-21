@@ -53,7 +53,7 @@ public class UserServiceImpl implements IUserService {
             userDao.createUser(userEntity);
             return userDto;
         } catch (Exception e) {
-            throw new UnsupportedOperationException("Error al guardar un usuario");
+            throw new IllegalArgumentException("Error al guardar un usuario");
         }
     }
 
