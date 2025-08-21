@@ -8,7 +8,6 @@ Aplicación de demostración que implementa el patrón DAO (Data Access Object) 
 - Uso de DTOs para transferencia de datos
 - API RESTful para gestión de usuarios
 - Mapeo automático con ModelMapper
-- Documentación de API con Swagger/OpenAPI
 
 ## 🛠️ Requisitos Previos
 
