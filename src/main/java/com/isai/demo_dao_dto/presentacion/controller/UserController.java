@@ -19,7 +19,7 @@ import com.isai.demo_dao_dto.service.interfaces.IUserService;
 import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/api/users")
 @RequiredArgsConstructor
 public class UserController {
 
